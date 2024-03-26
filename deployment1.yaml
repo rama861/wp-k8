@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels: 
+    app: mysql
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mujahid28/mysql:8.0.19
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+           value: Mujahidjani#28
+        - name: MYSQL_DATABASE
+           value: wordpress
+        - name: MYSQL_USER
+           value: mujahid
+        - name: MYSQL_PASSWORD
+           value: admin123
