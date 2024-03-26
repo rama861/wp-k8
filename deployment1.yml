@@ -2,12 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql-deployment
-  labels: 
+  labels:
     app: mysql
 spec:
   replicas: 2
   selector:
     matchLabels:
+      app: mysql
   template:
     metadata:
       labels:
@@ -20,10 +21,8 @@ spec:
         - containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
-           value: Mujahidjani#28
+          value: Mujahidjani#28
         - name: MYSQL_DATABASE
-           value: wordpress
+          value: wordpress
         - name: MYSQL_USER
-           value: mujahid
-        - name: MYSQL_PASSWORD
-           value: admin123
+          value: your_mysql_username_here
