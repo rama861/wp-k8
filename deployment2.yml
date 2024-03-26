@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wordpress-deployment
-  labels: 
+  labels:
     app: wordpress
 spec:
   replicas: 2
@@ -21,10 +21,7 @@ spec:
         - containerPort: 80
         env:
         - name: WORDPRESS_ROOT_DB_HOST
-           value: db
+          value: db
         - name: WORDPRESS_DB_USER
-           value: mujahid
-        - name: WORDPRESS_DB_PASSWORD
-           value: admin123
-        - name: WORDPRESS_DB_NAME
-           value: wordpress
+          value: mujahid
+``
