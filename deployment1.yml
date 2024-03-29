@@ -26,3 +26,4 @@ spec:
           value: wordpress
         - name: MYSQL_USER
           value: your_mysql_username_here
+
