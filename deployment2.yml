@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:latest   # Use the official WordPress image
+        image: wordpress:latest
         ports:
         - containerPort: 80
         env:
@@ -24,3 +24,4 @@ spec:
           value: db
         - name: WORDPRESS_DB_USER
           value: mujahid
+
